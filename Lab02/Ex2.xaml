@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Lab02.Ex1"
+    x:Class="Lab02.Ex2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Lab02"
@@ -7,10 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button>
-            <TextBlock>Hi</TextBlock>
-            <Image Source="Assets/Square44x44Logo.csale-200.png"/>
-        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="160*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="Red" Grid.Row="0"/>
+        <Rectangle Fill="blue" Grid.Row="1"/>
+        <Rectangle Fill="green" Grid.Row="3"/>
     </Grid>
 </Page>

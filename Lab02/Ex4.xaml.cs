@@ -20,9 +20,9 @@ namespace Lab02
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Ex1 : Page
+    public sealed partial class Ex4 : Page
     {
-        public Ex1()
+        public Ex4()
         {
             this.InitializeComponent();
         }

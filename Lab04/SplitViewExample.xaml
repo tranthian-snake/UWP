@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Horizontal">
-        <SplitView Name="MySplitView" DisplayMode="CompactOverlay" OpenPaneLength="50" CompactPaneLength="50">
+        <SplitView Name="MySplitView" CompactPaneLength="50" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="200">
             <SplitView.Pane>
                 <StackPanel>
                     <TextBlock Text="First"/>
@@ -17,13 +17,11 @@
                     <TextBlock Text="Third"/>
                 </StackPanel>
             </SplitView.Pane>
-            <SplitView.Content>
-                <StackPanel>
-                    <TextBlock Text="Fourth"/>
-                    <TextBlock Text="Fifth"/>
-                    <TextBlock Text="Sixth"/>
-                </StackPanel>
-            </SplitView.Content>
+            <StackPanel>
+                <TextBlock Text="Fourth"/>
+                <TextBlock Text="Fifth"/>
+                <TextBlock Text="Sixth"/>
+            </StackPanel>
         </SplitView>
         <Button Content="Click Me" Click="Button_Click"/>
     </StackPanel>

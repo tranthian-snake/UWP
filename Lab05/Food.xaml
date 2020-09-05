@@ -24,16 +24,16 @@
             <Image Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="10,5,5,5"/>
             <Image Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="0,5,5,5"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2">
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,10,0,20">
             <TextBlock FontSize="16" Width="360" Margin="10,0, 0, 5" Text="Lorem ipsum dolor sit amet, consectetur"/>
             <TextBlock FontSize="16" Width="360">Lorem ipsum dolor sit amet, consectetur</TextBlock>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
-            <Image Name="image1"  Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="10,5,5,5"/>
-            <Image Name="image2" Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="0,5,5,5"/>
+            <Image Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="10,5,5,5"/>
+            <Image Source="Assets/Food.png" Width="360" Stretch="Uniform" Margin="0,5,5,5"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
-            <TextBlock Name="text" FontSize="16" Width="360" Margin="10,0, 0, 5" Text="Lorem ipsum dolor sit amet, consectetur"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,10,0,20">
+            <TextBlock FontSize="16" Width="360" Text="Lorem ipsum dolor sit amet, consectetur"/>
             <TextBlock FontSize="16" Width="360">Lorem ipsum dolor sit amet, consectetur</TextBlock>
         </StackPanel>
     </Grid>

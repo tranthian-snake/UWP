@@ -28,11 +28,11 @@
             <TextBlock FontSize="16" Width="360" Margin="10,0, 0, 5">Lorem ipsum dolor sit amet, consectetur</TextBlock>
             <TextBlock FontSize="16"  Width="360" TextAlignment="Center">Lorem ipsum dolor sit amet, consectetur</TextBlock>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="0,10,0,20">
             <Image Source="Assets/Financial.png"  Width="360" Margin="10,5,5,5"/>
             <Image Source="Assets/Financial.png"  Width="360" Margin="0,5,5,5"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,10,0,20">
             <TextBlock FontSize="16" Width="360" Margin="10,0, 0, 5">Lorem ipsum dolor sit amet, consectetur</TextBlock>
             <TextBlock FontSize="16"  Width="360" TextAlignment="Center">Lorem ipsum dolor sit amet, consectetur</TextBlock>
         </StackPanel>

@@ -17,7 +17,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ColorGrid.Backgroud" Value="Red"/>
-                        <Setter Target="MessageTextBlock.Fontsize" Value="18"/>
+                        <Setter Target="MessageTextBlock.FontSize" Value="18"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateTablet">
@@ -26,7 +26,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ColorGrid.Backgroud" Value="Yellow"/>
-                        <Setter Target="MessageTextBlock.Fontsize" Value="36"/>
+                        <Setter Target="MessageTextBlock.FontSize" Value="36"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateDesktop">
@@ -35,7 +35,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ColorGrid.Backgroud" Value="Blue"/>
-                        <Setter Target="MessageTextBlock.Fontsize" Value="54"/>
+                        <Setter Target="MessageTextBlock.FontSize" Value="54"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

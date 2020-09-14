@@ -38,5 +38,4 @@
             <TextBlock Text="{x:Bind Contact.LastName}"/>
         </StackPanel>
     </StackPanel>
-    </StackPanel>
 </UserControl>

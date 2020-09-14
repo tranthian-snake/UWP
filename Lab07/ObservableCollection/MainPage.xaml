@@ -6,15 +6,76 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data="using:ObservableCollection.Models"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
+    <Page.Resources>
+        <DataTemplate x:Key="IconTemplate" x:DataType="data:Icon">
+            <StackPanel Height="40">
+                <Image Width="30" Height="30" Source="{x:Bind IconPath}" Stretch="Fill"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="NarrowLayout">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="0"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="AvatarImage.Width" Value="100"/>
+                    <Setter Target="AvatarImage.Height" Value="100"/>
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="WideLayout">
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="600"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="AvatarImage.Width" Value="200"/>
+                    <Setter Target="AvatarImage.Height" Value="200"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="First Name:" VerticalAlignment="Center" Margin="10"/>
+            <TextBox Grid.Column="1" Name="FirstNameTextBox" Margin="10"/>
+
+            <TextBlock Grid.Row="1" Text="Last Name:" VerticalAlignment="Center" Margin="10"/>
+            <TextBox  Grid.Row ="1" Grid.Column="1"  Name="LastNameTextBox" Margin="10"/>
+
+            <TextBlock Grid.Row="2" Text="Avatar:" VerticalAlignment="Center" Margin="10"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="10">
+                <ComboBox x:Name="AvatarComboBox" ItemTemplate="{StaticResource IconTemplate}" Height="40" Width="100"/>
+            </StackPanel>
+            <Button Grid.Row="3" Grid.Column="1" Name="NewContactButton" Click="NewContactButton_Click" Content="Add" Margin="10" />
+        </Grid>
+
         <GridView Grid.Row="2" ItemsSource="{x:Bind Contacts}" Margin="20">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Contact">
-                    <local:ContactTemplate HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <local:ContactTemplate VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                 </DataTemplate>
             </GridView.ItemTemplate>
-        </GridView>                                  
+        </GridView>
     </Grid>
 </Page>

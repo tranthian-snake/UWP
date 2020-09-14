@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="df06b82c-a0ea-4bd8-b371-93097ea6e275"
+    Name="1e5bcfa7-edaa-4800-a161-eafa44f5252a"
     Publisher="CN=Tran Thi An"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="df06b82c-a0ea-4bd8-b371-93097ea6e275" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1e5bcfa7-edaa-4800-a161-eafa44f5252a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ObservableCollection</DisplayName>

@@ -62,7 +62,7 @@
                 </ListBox>
             </SplitView.Pane>
             <SplitView.Content>
-                <GridView Name="NewsItemGrid" HorizontalAlignment="Stretch" Margin="10,0,0,0">
+                <GridView Name="NewsItemGrid" HorizontalAlignment="Stretch" Margin="10,0,0,0" ItemsSource="{x:Bind NewsItems}">
                     <GridView.ItemTemplate>
                         <DataTemplate x:DataType="data:NewsItem">
                             <local:NewsItemControl/>

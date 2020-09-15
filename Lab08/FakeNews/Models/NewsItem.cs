@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FakeNews.Models
 {
-    class NewsItem
+    public class NewsItem
     {
         public int Id { get; set; }
         public string Category { get; set; }

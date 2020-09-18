@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Practice.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Practice"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:data="using:Practice.Model"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ProductTemplate" x:DataType="data:Images">
+            <StackPanel Height="60">
+                <Image Width="100" Height="130" Source="{x:Bind ImgPath}" Stretch="Fill"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Product: " VerticalAlignment="Center" Margin="10"/>
+            <TextBox Grid.Column="1" Name="ProductTextBox" Margin="10"/>
+
+            <TextBlock Grid.Row="1" Text="Description: " VerticalAlignment="Center" Margin="10"/>
+            <TextBox  Grid.Row ="1" Grid.Column="1"  Name="DescriptionTextBox" Margin="10"/>
+
+            <TextBlock Grid.Row="2" Text="Image: " VerticalAlignment="Center" Margin="10"/>
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="10">
+                <ComboBox x:Name="ImageComboBox" ItemTemplate="{StaticResource ProductTemplate}" Height="90" Width="140"/>
+            </StackPanel>
+            <Button Grid.Row="3" Grid.Column="1" Name="NewProductButton" Click="NewProductButton_Click" Content="ORDER" Margin="10" />
+        </Grid>
+
+        <GridView Grid.Row="2" ItemsSource="{x:Bind Productss}" Margin="20">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Products">
+                    <local:ProductTemplate VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
